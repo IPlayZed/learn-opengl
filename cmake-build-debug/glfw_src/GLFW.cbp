@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="GLFW"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\glfw_src\;CMake Files\glfw_src\CMake\;CMake Files\glfw_src\src\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/cmake-build-debug/glfw_src"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/cmake-build-debug/glfw_src/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/cmake-build-debug/glfw_src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/cmake-build-debug/glfw_src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/cmake-build-debug/glfw_src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="uninstall">
+				<Option working_dir="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/cmake-build-debug/glfw_src"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/cmake-build-debug/glfw_src/Makefile&quot;  VERBOSE=1 uninstall"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/cmake-build-debug/glfw_src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/cmake-build-debug/glfw_src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/cmake-build-debug/glfw_src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glfw">
+				<Option output="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/cmake-build-debug/glfw_src/src/libglfw3.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/cmake-build-debug/glfw_src/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_GLFW_USE_CONFIG_H"/>
+					<Add directory="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/include"/>
+					<Add directory="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/src"/>
+					<Add directory="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/cmake-build-debug/glfw_src/src"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/cmake-build-debug/glfw_src/src/Makefile&quot;  VERBOSE=1 glfw"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/cmake-build-debug/glfw_src/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/cmake-build-debug/glfw_src/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/cmake-build-debug/glfw_src/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glfw/fast">
+				<Option output="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/cmake-build-debug/glfw_src/src/libglfw3.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/cmake-build-debug/glfw_src/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_GLFW_USE_CONFIG_H"/>
+					<Add directory="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/include"/>
+					<Add directory="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/src"/>
+					<Add directory="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/cmake-build-debug/glfw_src/src"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/cmake-build-debug/glfw_src/src/Makefile&quot;  VERBOSE=1 glfw/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/cmake-build-debug/glfw_src/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/cmake-build-debug/glfw_src/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/cmake-build-debug/glfw_src/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/cmake-build-debug/glfw_src/src/glfw_config.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/include/GLFW/glfw3.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/include/GLFW/glfw3native.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/src/context.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/src/egl_context.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/src/egl_context.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/src/glx_context.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/src/glx_context.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/src/init.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/src/input.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/src/internal.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/src/linux_joystick.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/src/linux_joystick.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/src/mappings.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/src/monitor.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/src/osmesa_context.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/src/osmesa_context.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/src/posix_thread.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/src/posix_thread.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/src/posix_time.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/src/posix_time.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/src/vulkan.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/src/window.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/src/x11_init.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/src/x11_monitor.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/src/x11_platform.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/src/x11_window.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/src/xkb_unicode.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/src/xkb_unicode.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\glfw_src\"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/CMake/cmake_uninstall.cmake.in">
+			<Option virtualFolder="CMake Files\glfw_src\CMake\"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/CMake/glfw3.pc.in">
+			<Option virtualFolder="CMake Files\glfw_src\CMake\"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/CMake/glfw3Config.cmake.in">
+			<Option virtualFolder="CMake Files\glfw_src\CMake\"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\glfw_src\src\"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/glfw_src/src/glfw_config.h.in">
+			<Option virtualFolder="CMake Files\glfw_src\src\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
