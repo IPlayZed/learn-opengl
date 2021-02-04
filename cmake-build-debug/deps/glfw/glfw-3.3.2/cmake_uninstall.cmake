@@ -1,9 +1,9 @@
 
-if (NOT EXISTS "/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/cmake-build-debug/deps/glfw/glfw-3.3.2/install_manifest.txt")
-  message(FATAL_ERROR "Cannot find install manifest: \"/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/cmake-build-debug/deps/glfw/glfw-3.3.2/install_manifest.txt\"")
+if (NOT EXISTS "/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/glfw/glfw-3.3.2/install_manifest.txt")
+  message(FATAL_ERROR "Cannot find install manifest: \"/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/glfw/glfw-3.3.2/install_manifest.txt\"")
 endif()
 
-file(READ "/home/minef/MEGAsync/Hobbiprogramozas/learnopengl/cmake-build-debug/deps/glfw/glfw-3.3.2/install_manifest.txt" files)
+file(READ "/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/glfw/glfw-3.3.2/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})
