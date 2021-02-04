@@ -124,18 +124,18 @@
 				</MakeCommands>
 			</Target>
 			<Target title="uninstall">
-				<Option working_dir="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glfw/glfw-3.3.2"/>
+				<Option working_dir="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glad"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glfw/glfw-3.3.2/Makefile&quot;  VERBOSE=1 uninstall"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glfw/glfw-3.3.2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glfw/glfw-3.3.2/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glfw/glfw-3.3.2/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glad/Makefile&quot;  VERBOSE=1 uninstall"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glad/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glad/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glad/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="glfw">
-				<Option output="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glfw/glfw-3.3.2/src/libglfw3.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glfw/glfw-3.3.2/src"/>
+				<Option output="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glad/src/libglfw3.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glad/src"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
@@ -143,7 +143,7 @@
 					<Add option="-D_GLFW_USE_CONFIG_H"/>
 					<Add directory="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/deps/src/glfw/glfw-3.3.2/include"/>
 					<Add directory="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/deps/src/glfw/glfw-3.3.2/src"/>
-					<Add directory="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glfw/glfw-3.3.2/src"/>
+					<Add directory="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glad/src"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -153,15 +153,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glfw/glfw-3.3.2/src/Makefile&quot;  VERBOSE=1 glfw"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glfw/glfw-3.3.2/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glfw/glfw-3.3.2/src/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glfw/glfw-3.3.2/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glad/src/Makefile&quot;  VERBOSE=1 glfw"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glad/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glad/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glad/src/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="glfw/fast">
-				<Option output="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glfw/glfw-3.3.2/src/libglfw3.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glfw/glfw-3.3.2/src"/>
+				<Option output="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glad/src/libglfw3.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glad/src"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
@@ -169,7 +169,7 @@
 					<Add option="-D_GLFW_USE_CONFIG_H"/>
 					<Add directory="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/deps/src/glfw/glfw-3.3.2/include"/>
 					<Add directory="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/deps/src/glfw/glfw-3.3.2/src"/>
-					<Add directory="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glfw/glfw-3.3.2/src"/>
+					<Add directory="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glad/src"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -179,14 +179,14 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glfw/glfw-3.3.2/src/Makefile&quot;  VERBOSE=1 glfw/fast"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glfw/glfw-3.3.2/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glfw/glfw-3.3.2/src/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glfw/glfw-3.3.2/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glad/src/Makefile&quot;  VERBOSE=1 glfw/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glad/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glad/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glad/src/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glfw/glfw-3.3.2/src/glfw_config.h">
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/cmake-build-debug/deps/src/glad/src/glfw_config.h">
 			<Option target="glfw"/>
 		</Unit>
 		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/deps/src/glfw/glfw-3.3.2/include/GLFW/glfw3.h">
