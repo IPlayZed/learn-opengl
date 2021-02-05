@@ -1,10 +1,10 @@
 #define GLFW_INCLUDE_NONE
-
 #include <iostream>
 #include "deps/glad/include/glad/glad.h"
 #include "deps/glfw/glfw-3.3.2/include/GLFW/glfw3.h"
 
 namespace App {
+    typedef GLuint *GLUIPTR;
     void error_callback(int err, const char *desc) {
         fprintf(stderr, "Error: %s\n", desc);
     }
@@ -19,7 +19,15 @@ namespace App {
         }
     }
 
-    int start_application() {
+    namespace Render {
+        App::GLUIPTR get_vertex_buffers(int num_of_buffers) {
+            auto *VBOs_ptr = new GLuint[num_of_buffers];
+            glGenBuffers(num_of_buffers, VBOs_ptr);
+            return VBOs_ptr;
+        }
+    }
+
+    int start_application(float *vertices) {
 
         glfwSetErrorCallback(App::error_callback);
         if (!glfwInit()) {
@@ -62,6 +70,7 @@ namespace App {
         /*
          * Render loop.
          */
+        App::GLUIPTR VBO;
         while (!glfwWindowShouldClose(glfWwindow)) {
             //We first process the inputs.
             App::process_input(glfWwindow);
@@ -70,17 +79,27 @@ namespace App {
             glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT);
 
+            VBO = App::Render::get_vertex_buffers(1);
+            glBindBuffer(GL_ARRAY_BUFFER, *VBO);
+            glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
             //Swap the back and front render buffers.
             glfwSwapBuffers(glfWwindow);
             //Process events and call the callback function for those which it should.
             glfwPollEvents();
         }
+        delete VBO;
 
         return 0;
     }
 }
 
 int main() {
-    int app_state = App::start_application();
+    float vertices[] = {
+            -0.5f, -0.5f, 0.0f,
+            0.5f, -0.5f, 0.0f,
+            0.0f, 0.5f, 0.0f
+    };
+    int app_state = App::start_application(vertices);
     return app_state;
 }
