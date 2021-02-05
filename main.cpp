@@ -8,26 +8,62 @@ void error_callback(int err, const char *desc) {
     fprintf(stderr, "Error: %s\n", desc);
 }
 
-int main() {
+void framebuffer_size_callback(GLFWwindow *, int width, int height) {
+    glViewport(0, 0, width, height);
+}
 
-    glfwInit();
+int start_application() {
+
+    glfwSetErrorCallback(error_callback);
+    if (!glfwInit()) {
+        return -1;
+    }
+
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    GLFWwindow *glfWwindow = glfwCreateWindow(960, 540, "Probe", NULL, NULL);
-    if (glfWwindow == NULL) {
+    GLFWwindow *glfWwindow = glfwCreateWindow(960, 540, "Probe", nullptr, nullptr);
+    if (glfWwindow == nullptr) {
         std::cerr << "GLFW window failed to initialize!\n";
         glfwTerminate();
-        return -1;
+        return -2;
     }
 
     glfwMakeContextCurrent(glfWwindow);
 
     if (!gladLoadGLLoader((GLADloadproc) glfwGetProcAddress)) {
         std::cerr << "GLAD failed to initialize\n";
-        return -1;
+        return -3;
+    }
+
+    /***
+     * This function provides the data for OpenGL to make the transformation from normalized device coordinates to window coordinates.
+     * 1. and 2. parameters are between -1 and 1. These are the normalized device coordinates. (x and y.)
+     * The 1. and 2. params are translated to window coordinates, in pixels, or so to say to the viewport.
+     * The 3. and 4. parameters are the maximum width and height of the viewport in pixels, naturally.
+     * This implicates that we do not have to have the same size of the window for the viewport and we could also render outside of it.
+     * The mapping if width is 960px and height is 540px maps (-1,1) to (0,960) and (-1,1) to (0,540).
+     */
+    glViewport(0, 0, 960, 540);
+
+    /***
+     * Ensure that viewport in set to window size when GLFW window is resized.
+     */
+    glfwSetWindowSizeCallback(glfWwindow, framebuffer_size_callback);
+
+    /***
+     * Render loop.
+     */
+    while (!glfwWindowShouldClose(glfWwindow)) {
+        glfwSwapBuffers(glfWwindow);
+        glfwPollEvents();
     }
 
     return 0;
+}
+
+int main() {
+    int app_state = start_application();
+    return app_state;
 }
