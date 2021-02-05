@@ -1,19 +1,14 @@
 #define GLFW_INCLUDE_NONE
 
 #include <iostream>
-#include "deps/src/glad/include/glad/glad.h"
-#include "deps/src/glfw/glfw-3.3.2/include/GLFW/glfw3.h"
+#include "deps/glad/include/glad/glad.h"
+#include "deps/glfw/glfw-3.3.2/include/GLFW/glfw3.h"
 
 void error_callback(int err, const char *desc) {
     fprintf(stderr, "Error: %s\n", desc);
 }
 
 int main() {
-    //TODO: restructure project so glad can be added as a CMake subdir (probably clone source?)
-    if (!gladLoadGLLoader((GLADloadproc) glfwGetProcAddress)) {
-        std::cerr << "GLAD failed to initialize\n";
-        return -1;
-    }
 
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -28,6 +23,11 @@ int main() {
     }
 
     glfwMakeContextCurrent(glfWwindow);
+
+    if (!gladLoadGLLoader((GLADloadproc) glfwGetProcAddress)) {
+        std::cerr << "GLAD failed to initialize\n";
+        return -1;
+    }
 
     return 0;
 }
