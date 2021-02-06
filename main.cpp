@@ -20,10 +20,22 @@ namespace App {
     }
 
     namespace Render {
-        App::GLUIPTR get_vertex_buffers(int num_of_buffers) {
-            auto *VBOs_ptr = new GLuint[num_of_buffers];
-            glGenBuffers(num_of_buffers, VBOs_ptr);
-            return VBOs_ptr;
+        /***
+         * Generates vertex buffer objects into the given buffer.
+         * @param num_of_buffers Number of buffer objects to be created.
+         * @param buffer Buffer to hold the to-be generated VBOs. Must point to an array with enough space allocated.
+         */
+        void gen_VBOs(int VBO_num, GLUIPTR buffer) {
+            glGenBuffers(VBO_num, buffer);
+        }
+
+        /***
+         * Creates and returns a buffer to facilitate VBOs in it.
+         * @param VBO_num Size of the buffer, must be at least as big as the number of VBOs to be generated into the buffer.
+         * @return Pointer to the dynamically generated buffer.
+         */
+        App::GLUIPTR gen_VBO_buffer(int VBO_num) {
+            return new GLuint[VBO_num];
         }
     }
 
@@ -70,7 +82,8 @@ namespace App {
         /*
          * Render loop.
          */
-        App::GLUIPTR VBO;
+        int buffer_num = 1;
+        auto *VBO = App::Render::gen_VBO_buffer(buffer_num);
         while (!glfwWindowShouldClose(glfWwindow)) {
             //We first process the inputs.
             App::process_input(glfWwindow);
@@ -79,7 +92,7 @@ namespace App {
             glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT);
 
-            VBO = App::Render::get_vertex_buffers(1);
+            App::Render::gen_VBOs(buffer_num, VBO);
             glBindBuffer(GL_ARRAY_BUFFER, *VBO);
             glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
@@ -88,7 +101,7 @@ namespace App {
             //Process events and call the callback function for those which it should.
             glfwPollEvents();
         }
-        delete VBO;
+        delete[] VBO;
         VBO = nullptr;
 
         return 0;
