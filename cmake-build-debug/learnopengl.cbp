@@ -282,6 +282,9 @@
 		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/include/render.h">
 			<Option target="learnopengl"/>
 		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/include/shader.h">
+			<Option target="learnopengl"/>
+		</Unit>
 		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/src/app.cpp">
 			<Option target="learnopengl"/>
 		</Unit>
@@ -289,6 +292,9 @@
 			<Option target="learnopengl"/>
 		</Unit>
 		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/src/render.cpp">
+			<Option target="learnopengl"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/src/shader.cpp">
 			<Option target="learnopengl"/>
 		</Unit>
 		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/CMakeLists.txt">

@@ -8,6 +8,7 @@
 #include "GLFW/glfw3.h"
 #include "../include/app.h"
 #include "../include/render.h"
+#include "../include/shader.h"
 
 namespace App {
     void error_callback(int err, const char *desc) {
@@ -69,6 +70,7 @@ namespace App {
          */
         int buffer_num = 1;
         auto *VBO = Render::gen_VBO_buffer(buffer_num);
+        std::string vertex_shader = read_shader("./shaders/vertex_shader.glsl");
         while (!glfwWindowShouldClose(glfWwindow)) {
             //We first process the inputs.
             App::process_input(glfWwindow);
