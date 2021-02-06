@@ -276,7 +276,19 @@
 		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/deps/glfw/glfw-3.3.2/src/xkb_unicode.h">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/main.cpp">
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/include/app.h">
+			<Option target="learnopengl"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/include/render.h">
+			<Option target="learnopengl"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/src/app.cpp">
+			<Option target="learnopengl"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/src/main.cpp">
+			<Option target="learnopengl"/>
+		</Unit>
+		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/src/render.cpp">
 			<Option target="learnopengl"/>
 		</Unit>
 		<Unit filename="/home/minef/MEGAsync/Hobbiprogramozas/learn_opengl/CMakeLists.txt">

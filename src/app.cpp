@@ -1,10 +1,15 @@
+//
+// Created by minef on 2/6/21.
+//
 #define GLFW_INCLUDE_NONE
+
 #include <iostream>
-#include "deps/glad/include/glad/glad.h"
-#include "deps/glfw/glfw-3.3.2/include/GLFW/glfw3.h"
+#include "../deps/glad/include/glad/glad.h"
+#include "GLFW/glfw3.h"
+#include "../include/app.h"
+#include "../include/render.h"
 
 namespace App {
-    typedef GLuint *GLUIPTR;
     void error_callback(int err, const char *desc) {
         fprintf(stderr, "Error: %s\n", desc);
     }
@@ -16,26 +21,6 @@ namespace App {
     void process_input(GLFWwindow *glfWwindow) {
         if (glfwGetKey(glfWwindow, GLFW_KEY_ESCAPE) == GLFW_PRESS or glfwGetKey(glfWwindow, GLFW_KEY_E) == GLFW_PRESS) {
             glfwSetWindowShouldClose(glfWwindow, true);
-        }
-    }
-
-    namespace Render {
-        /***
-         * Generates vertex buffer objects into the given buffer.
-         * @param num_of_buffers Number of buffer objects to be created.
-         * @param buffer Buffer to hold the to-be generated VBOs. Must point to an array with enough space allocated.
-         */
-        void gen_VBOs(int VBO_num, App::GLUIPTR buffer) {
-            glGenBuffers(VBO_num, buffer);
-        }
-
-        /***
-         * Creates and returns a buffer to facilitate VBOs in it.
-         * @param VBO_num Size of the buffer, must be at least as big as the number of VBOs to be generated into the buffer.
-         * @return Pointer to the dynamically generated buffer.
-         */
-        App::GLUIPTR gen_VBO_buffer(int VBO_num) {
-            return new GLuint[VBO_num];
         }
     }
 
@@ -83,7 +68,7 @@ namespace App {
          * Render loop.
          */
         int buffer_num = 1;
-        auto *VBO = App::Render::gen_VBO_buffer(buffer_num);
+        auto *VBO = Render::gen_VBO_buffer(buffer_num);
         while (!glfwWindowShouldClose(glfWwindow)) {
             //We first process the inputs.
             App::process_input(glfWwindow);
@@ -92,7 +77,7 @@ namespace App {
             glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT);
 
-            App::Render::gen_VBOs(buffer_num, VBO);
+            Render::gen_VBOs(buffer_num, VBO);
             glBindBuffer(GL_ARRAY_BUFFER, *VBO);
             glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
@@ -106,14 +91,4 @@ namespace App {
 
         return 0;
     }
-}
-
-int main() {
-    float vertices[] = {
-            -0.5f, -0.5f, 0.0f,
-            0.5f, -0.5f, 0.0f,
-            0.0f, 0.5f, 0.0f
-    };
-    int app_state = App::start_application(vertices);
-    return app_state;
 }
